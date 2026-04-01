@@ -24,6 +24,13 @@ const config = {
     locales: ['en'],
   },
 
+  stylesheets: [
+    {
+      href: "/edu/fonts/fonts.css",
+      type: "text/css",
+    },
+  ],
+
   presets: [
     [
       'classic',
