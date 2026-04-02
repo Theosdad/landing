@@ -1,0 +1,19 @@
+@use "@site/src/css/variables.scss" as *;
+
+.navbar-sidebar {
+  width: 100%;
+}
+
+.navbar-sidebar__item {
+  width: 100%;
+
+  .menu__link {
+    color: $gray-1;
+    font-weight: 400;
+
+    &--active {
+      color: $blue-1;
+      font-weight: 600;
+    }
+  }
+}

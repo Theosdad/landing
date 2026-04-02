@@ -1,0 +1,6 @@
+@use "@site/src/css/variables.scss" as *;
+
+.navbar__items {
+  justify-content: space-between;
+  gap: $spacing-xs;
+}

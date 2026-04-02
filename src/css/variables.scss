@@ -1,0 +1,88 @@
+//colors
+$basic-white: #fefefe;
+$basic-black: #121212;
+$accent-text: #3a5276;
+
+$blue-1: #3064dc;
+$blue-2: #045aaa;
+$blue-3: #6591f5;
+$blue-4: #6f9bff;
+$blue-5: #075dac;
+
+$gray-1: #9ca4ba;
+$gray-2: #dee4f2;
+$gray-3: #d9d9d9;
+$gray-4: #677997;
+
+$background-color: #f3f4f5;
+
+//spacing
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+
+//breakpoints
+$small-screen-max-width: 996px;
+$big-screen-min-width: 997px;
+
+//border-radius
+$border-radius-base: 20px;
+$border-radius-md: 24px;
+
+//font
+$breeze: "Breeze Sans", "Verdana", sans-serif;
+$breeze-condensed: "Breeze Sans Condensed", "Tahoma", sans-serif;
+$fira: "Fira Sans Extra Condensed", "Helvetica", sans-serif;
+
+
+// font-sizes mixins
+@mixin font-size-base {
+  line-height: 100%;
+
+  @media screen and (max-width: #{$small-screen-max-width}) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: #{$big-screen-min-width}) {
+    font-size: 16px;
+  }
+}
+
+@mixin font-size-lg {
+  line-height: 100%;
+
+  @media screen and (max-width: #{$small-screen-max-width}) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: #{$big-screen-min-width}) {
+    font-size: 24px;
+  }
+}
+
+@mixin font-size-xl {
+  line-height: 100%;
+
+  @media screen and (max-width: #{$small-screen-max-width}) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: #{$big-screen-min-width}) {
+    font-size: 32px;
+  }
+}
+
+@mixin font-size-xxl {
+  line-height: 100%;
+
+  @media screen and (max-width: #{$small-screen-max-width}) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: #{$big-screen-min-width}) {
+    font-size: 48px;
+  }
+}

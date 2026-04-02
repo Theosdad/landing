@@ -1,106 +1,110 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer').themes.github;
-const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+const lightCodeTheme = require("prism-react-renderer").themes.github;
+const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Landing',
-  tagline: 'Welcome to our landing page',
-  favicon: 'img/favicon.ico',
+  title: "Landing",
+  tagline: "Welcome to our landing page",
+  favicon: "img/favicon.ico",
 
-  url: 'https://theosdad.github.io',
-  baseUrl: '/landing/',
+  url: "https://theosdad.github.io",
+  baseUrl: "/landing/",
 
-  organizationName: 'Theosdad',
-  projectName: 'landing',
+  organizationName: "Theosdad",
+  projectName: "landing",
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   stylesheets: [
     {
-      href: "/edu/fonts/fonts.css",
+      href: "/landing/fonts/fonts.css",
       type: "text/css",
     },
   ],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
           showReadingTime: true,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
     ],
   ],
 
+  plugins: ["docusaurus-plugin-sass"],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'Landing',
         logo: {
-          alt: 'Landing Logo',
-          src: 'img/logo.svg',
+          alt: "Landing Logo",
+          src: "img/logo.svg",
         },
         items: [
+          { to: "/", label: "О нас", position: "right" },
+          { to: "#", label: "События", position: "right" },
+          { to: "#", label: "Продукты", position: "right" },
+          { to: "#", label: "Контакты", position: "right" },
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Docs',
+            type: "dropdown",
+            label: "Интересное",
+            position: "right",
+            items: [
+              { to: "#", label: "Обучение" },
+              { to: "#", label: "Публикации" },
+              { to: "#", label: "Технологии" },
+              { to: "#", label: "Лицензии, сертификаты, товарные знаки, РИД" },
+            ],
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/Theosdad/landing',
-            label: 'GitHub',
-            position: 'right',
-          },
+          { to: "https://docs.moncloud.ru/1.6.3/ru/", label: "Документация", position: "right" },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Tutorial",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/Theosdad/landing',
+                label: "GitHub",
+                href: "https://github.com/Theosdad/landing",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: "Blog",
+                to: "/blog",
               },
             ],
           },

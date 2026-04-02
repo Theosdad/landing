@@ -1,0 +1,54 @@
+@use "@site/src/css/variables.scss" as *;
+
+.navbar__link {
+  @include font-size-base;
+  font-family: $breeze;
+  color: $gray-1;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: $spacing-xs !important;
+  position: relative;
+
+  &:hover {
+    color: $blue-1;
+    text-decoration: none;
+  }
+
+  &--active {
+    color: $blue-1;
+    font-weight: 600;
+  }
+
+  &:hover::before,
+  &--active::before {
+    content: "";
+    display: block;
+    width: calc(100% - $spacing-xs * 2);
+    height: 1px;
+    background-color: $blue-1;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.dropdown__link {
+  @include font-size-base;
+  font-family: $breeze;
+  color: $gray-1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $blue-1;
+    background-color: $gray-2;
+  }
+}
+
+.navbar__item.dropdown {
+    padding: 0;
+
+    .navbar__link:hover {
+
+    }
+}
