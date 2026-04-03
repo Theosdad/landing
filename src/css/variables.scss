@@ -29,6 +29,7 @@ $small-screen-max-width: 996px;
 $big-screen-min-width: 997px;
 
 //border-radius
+$border-radius-sm: 12px;
 $border-radius-base: 20px;
 $border-radius-md: 24px;
 
@@ -36,7 +37,6 @@ $border-radius-md: 24px;
 $breeze: "Breeze Sans", "Verdana", sans-serif;
 $breeze-condensed: "Breeze Sans Condensed", "Tahoma", sans-serif;
 $fira: "Fira Sans Extra Condensed", "Helvetica", sans-serif;
-
 
 // font-sizes mixins
 @mixin font-size-base {

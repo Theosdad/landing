@@ -1,0 +1,133 @@
+@use "@site/src/css/variables.scss" as *;
+
+.home-main {
+  margin: $spacing-md;
+  border-radius: $border-radius-sm;
+  background-color: $basic-white;
+}
+
+.hero-section {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: $spacing-xl $spacing-xs;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: $spacing-md * 2;
+
+  &__banner {
+    height: 400px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius-md;
+    }
+
+    &-text {
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      transform: translateX(-50%);
+      width: calc(100% - $spacing-xl * 2);
+
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+
+      h1 {
+        font-family: $fira;
+        color: $basic-white;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 118px;
+        font-weight: 600;
+      }
+
+      p {
+        @include font-size-lg;
+        color: $basic-white;
+        font-family: $breeze-condensed;
+        margin: 0;
+      }
+    }
+  }
+
+  &__offer {
+    align-self: end;
+  }
+}
+
+.hero-offer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  h2 {
+    font-family: $fira;
+    color: $accent-text;
+    line-height: 100%;
+    font-weight: 400;
+    font-size: 64px;
+    margin: 0;
+  }
+
+  span {
+    align-self: flex-end;
+    color: $gray-1;
+    font-weight: 300;
+  }
+
+  &__wrapper {
+    padding: $spacing-md;
+    border: 1px solid $gray-2;
+    border-radius: $border-radius-base;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    h3 {
+      @include font-size-lg;
+      font-family: $fira;
+      color: $accent-text;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__item {
+    padding: $spacing-md;
+    border: 1px solid $gray-2;
+    border-radius: $border-radius-base;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    &__banner {
+      height: auto;
+      min-height: 300px;
+
+      &-text {
+        h1 {
+          font-size: 52px;
+        }
+      }
+    }
+  }
+
+  .hero-offer {
+    h2 {
+      font-size: 40px;
+    }
+  }
+}

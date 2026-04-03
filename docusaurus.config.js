@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 const config = {
   title: "Landing",
   tagline: "Welcome to our landing page",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   url: "https://theosdad.github.io",
   baseUrl: "/landing/",
