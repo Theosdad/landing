@@ -16,4 +16,5 @@
 body {
   @include font-size-base;
   font-family: $breeze;
+  color: $basic-black;
 }

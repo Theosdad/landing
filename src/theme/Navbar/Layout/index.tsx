@@ -9,7 +9,7 @@ import { translate } from "@docusaurus/Translate";
 import NavbarMobileSidebar from "@theme/Navbar/MobileSidebar";
 import type { Props } from "@theme/Navbar/Layout";
 
-// import './styles.module.css';
+import './index.scss';
 
 function NavbarBackdrop(props: ComponentProps<"div">) {
   return (

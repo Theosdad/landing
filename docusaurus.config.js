@@ -18,6 +18,12 @@ const config = {
 
   onBrokenLinks: "throw",
 
+  customFields: {
+    footerEmail: "info@moncloud.ru",
+    footerPhone: "+7 495 899-09-29",
+    footerLastUpdate: "09.30.2025",
+  },
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -80,36 +86,11 @@ const config = {
       },
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/Theosdad/landing",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Landing. Built with Docusaurus.`,
+        logo: {
+          alt: "Landing Logo",
+          src: "img/logo.svg",
+        },
+        copyright: `© moncloud: 2023 - ${new Date().getFullYear()}`,
       },
       prism: {
         theme: lightCodeTheme,

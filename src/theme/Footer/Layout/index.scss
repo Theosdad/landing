@@ -1,0 +1,68 @@
+@use "@site/src/css/variables.scss" as *;
+
+.footer {
+  background-color: $background-color;
+  color: $basic-black;
+  padding: $spacing-xl $spacing-md;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-xl;
+  }
+
+  &__logo {
+    width: 180px;
+    margin: 0;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    a {
+      color: $blue-2;
+      font-weight: 600;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-xl;
+
+    font-size: 11px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .footer {
+    &__logo {
+      width: 145px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    &__bottom,
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
