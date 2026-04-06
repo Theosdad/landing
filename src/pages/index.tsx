@@ -45,6 +45,69 @@ export default function Home() {
             <span>Обе модели подразумевают повышенную безопасность среды.</span>
           </div>
         </section>
+        <section className="included">
+          <div className="included__wrapper">
+            <div className="included__text">
+              <h2>Что в комплекте:</h2>
+              <p>
+                Промышленные функции, которых нет в&nbsp;Opensource-редакциях
+                Openstack (и&nbsp;в&nbsp;некоторых коммерческих решениях).Обе
+                модели подразумевают повышенную безопасность среды.
+              </p>
+              <span>
+                Решение поставляется вместе со&nbsp;средой сопровождения (TUI +
+                CLI + API): установка, упрощённое добавление новых узлов,
+                обновление и&nbsp;другие операции сопровождения (собственная
+                разработка).
+              </span>
+            </div>
+            <ul className="included__list list-reset">
+              <li className="included__item">
+                Отказоустойчивость ВМ&nbsp;и&nbsp;управляющей плоскости
+              </li>
+              <li className="included__item">
+                Балансировка нагрузки по&nbsp;гипервизорам/перераспредение ВМ
+              </li>
+              <li className="included__item">
+                Собственная реализация SDN, ориентированный на&nbsp;сложные
+                сетевые задачи. Поддерживается полный набор возможностей для
+                работы Network Function Virtualization (NFV)&nbsp;/ Service
+                Function Chaining (SFC)
+              </li>
+              <li className="included__item">
+                VPNaaS с&nbsp;возможностью прозрачного подключения пользователей
+                к&nbsp;виртуальным сетям, а&nbsp;также классический site-to-site
+              </li>
+              <li className="included__item">
+                Управление облачными заданиями по&nbsp;расписанию
+              </li>
+              <li className="included__item">
+                Собственная технология VDI&nbsp;/ Desktop as&nbsp;a&nbsp;Service
+                для Windows и&nbsp;Linux. В&nbsp;качестве протокола трансляции
+                можно использовать как RDP, так и&nbsp;нашу собственную
+                реализацию, ориентированную на&nbsp;пониженные задержки
+                и&nbsp;3D-нагрузки.
+              </li>
+              <li className="included__item">Биллинг использования ресурсов</li>
+              <li className="included__item">
+                Полный аудит событий в&nbsp;облаке
+              </li>
+              <li className="included__item">
+                Подконтрольные Platform-as-a-Service (с&nbsp;возможностью
+                быстрого добавления новых сервисов при наличии запроса).
+                Простота добавления обеспечивается использованием стандарта
+                OASIS TOSCA в&nbsp;нашем движке оркестрации платформенных
+                сервисов. Предоставляются Kubernetes as&nbsp;a&nbsp;Service
+                и&nbsp;PostgreSQL as&nbsp;a&nbsp;Service с&nbsp;выбором версии
+                и&nbsp;упрощённой настройкой (дистрибутивы PostgreSQL
+                и&nbsp;Kubernetes не&nbsp;входят в&nbsp;дистрибутив облачной
+                среды)
+              </li>
+              <li className="included__item">Контроль целостности виртуальных машин</li>
+              <li className="included__item">Управление оборудованием</li>
+            </ul>
+          </div>
+        </section>
       </main>
     </Layout>
   );

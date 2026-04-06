@@ -9,7 +9,7 @@
 .hero-section {
   max-width: 1800px;
   margin: 0 auto;
-  padding: $spacing-xl $spacing-xs;
+  padding: $spacing-xl;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   gap: $spacing-md * 2;
@@ -110,9 +110,80 @@
   }
 }
 
+.included {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $spacing-md;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    h2 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: 400;
+      font-family: $fira;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 300;
+      line-height: 24px;
+    }
+
+    span {
+      margin-top: auto;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-sm;
+    counter-reset: included-counter;
+  }
+
+  &__item {
+    padding: $spacing-md;
+    padding-right: $spacing-xl * 2;
+    border-radius: $border-radius-base;
+    border: 1px solid $gray-2;
+
+    line-height: 24px;
+    font-weight: 300;
+    position: relative;
+    counter-increment: included-counter;
+
+    &::before {
+      content: counter(included-counter);
+      position: absolute;
+      bottom: $spacing-md;
+      right: $spacing-md;
+      font-weight: 700;
+      font-size: 24px;
+      color: $gray-1;
+    }
+
+    &:nth-child(3n + 3) {
+      grid-column: span 2;
+    }
+  }
+}
+
 @media screen and (max-width: #{$small-screen-max-width}) {
   .hero-section {
     grid-template-columns: 1fr;
+    padding: $spacing-xl $spacing-xs;
     &__banner {
       height: auto;
       min-height: 300px;
@@ -128,6 +199,24 @@
   .hero-offer {
     h2 {
       font-size: 40px;
+    }
+  }
+
+  .included {
+    padding: $spacing-xl $spacing-xs;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:nth-child(3n + 3) {
+        grid-column: auto;
+      }
     }
   }
 }
