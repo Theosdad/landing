@@ -103,8 +103,53 @@ export default function Home() {
                 и&nbsp;Kubernetes не&nbsp;входят в&nbsp;дистрибутив облачной
                 среды)
               </li>
-              <li className="included__item">Контроль целостности виртуальных машин</li>
+              <li className="included__item">
+                Контроль целостности виртуальных машин
+              </li>
               <li className="included__item">Управление оборудованием</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="strengths">
+          <div className="strengths__wrapper">
+            <div className="strengths__badge">
+              <h2>Наши сильные стороны</h2>
+              <img src="./img/swot.png" alt="" />
+            </div>
+            <ul className="strengths__list list-reset">
+              <li className="strengths__item">
+                <h3>Поддержка от&nbsp;индустрии</h3>
+                <p>
+                  Компания основана командой, занимающейся строительством
+                  сверхнадёжных ЦОД и&nbsp;построившей первый
+                  в&nbsp;РФ&nbsp;Tier-IV&nbsp;датацентр.
+                </p>
+              </li>
+              <li className="strengths__item">
+                <h3>Промышленный подход к&nbsp;продуктам</h3>
+                <p>
+                  В&nbsp;основе IaaS-части лежит комбинация продуктов Asperitas
+                  и&nbsp;AccentOS. AccentOS известен в&nbsp;сообществе своими
+                  функциональными возможностями, Asperitas использует надёжные
+                  механизмы безопасности и&nbsp;является передовой разработкой
+                  в&nbsp;консорциуме облачных технологий Российской Академии
+                  Наук.
+                </p>
+              </li>
+              <li className="strengths__item">
+                <h3>Научные принципы</h3>
+                <p>
+                  Проект изначально запущен в&nbsp;рамках сотрудничества
+                  с&nbsp;Институтом Системного Программирования им. В.П.
+                  Иванникова Российской Академии Наук. Институт занимается
+                  разработками технологий от&nbsp;уровня оборудования
+                  до&nbsp;уровня прикладных приложений. Институт также известен
+                  повышенным вниманием к&nbsp;анализу исходных и&nbsp;бинарных
+                  кодов, а&nbsp;также внимательностью к&nbsp;аспектам
+                  безопасности на&nbsp;всех уровнях.
+                </p>
+              </li>
             </ul>
           </div>
         </section>

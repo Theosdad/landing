@@ -4,6 +4,9 @@
   margin: $spacing-md;
   border-radius: $border-radius-sm;
   background-color: $basic-white;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg * 2;
 }
 
 .hero-section {
@@ -180,7 +183,80 @@
   }
 }
 
+.strengths {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $spacing-md;
+  }
+
+  &__badge {
+    padding: 40px 32px;
+    border-radius: $border-radius-base;
+    background: linear-gradient(94.49deg, $blue-1 12.11%, $blue-5 148.66%);
+    position: relative;
+
+    h2 {
+      color: $basic-white;
+      margin: 0;
+      font-family: $fira;
+      font-weight: 600;
+      font-size: 53px;
+      line-height: 90%;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xs;
+  }
+
+  &__item {
+    padding: $spacing-md;
+    border-radius: $border-radius-base;
+    border: 1px solid $gray-2;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    h3 {
+      @include font-size-lg;
+      color: $accent-text;
+      margin: 0;
+      font-family: $fira;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0;
+      line-height: 140%;
+      font-weight: 300;
+    }
+
+    &:nth-child(3n + 3) {
+      grid-column: span 2;
+    }
+  }
+}
+
 @media screen and (max-width: #{$small-screen-max-width}) {
+  .home-main {
+    margin: $spacing-md $spacing-xs;
+  }
+
   .hero-section {
     grid-template-columns: 1fr;
     padding: $spacing-xl $spacing-xs;
@@ -207,6 +283,38 @@
 
     &__wrapper {
       grid-template-columns: 1fr;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:nth-child(3n + 3) {
+        grid-column: auto;
+      }
+    }
+  }
+
+  .strengths {
+    padding: $spacing-xl $spacing-xs;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__badge {
+      padding: $spacing-xl;
+      padding-right: 120px;
+      min-height: 120px;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      img {
+        width: 120px;
+      }
     }
 
     &__list {
