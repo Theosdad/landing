@@ -5,10 +5,13 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
 import "./index.scss";
+import NewsList from "../components/NewsList";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  const [activeComparison, setActiveComparison] = useState<'openstack' | 'moncloud'>('openstack');
+  const [activeComparison, setActiveComparison] = useState<
+    "openstack" | "moncloud"
+  >("openstack");
   return (
     <Layout
       title={`moncloud`}
@@ -160,20 +163,28 @@ export default function Home() {
           <h2>Наши преимущества от&nbsp;ванильного OpenStack</h2>
           <div className="comparison__buttons">
             <button
-              className={clsx('comparison__button', { active: activeComparison === 'openstack' })}
-              onClick={() => setActiveComparison('openstack')}
+              className={clsx("comparison__button", {
+                active: activeComparison === "openstack",
+              })}
+              onClick={() => setActiveComparison("openstack")}
             >
               Ванильный OpenStack
             </button>
             <button
-              className={clsx('comparison__button', { active: activeComparison === 'moncloud' })}
-              onClick={() => setActiveComparison('moncloud')}
+              className={clsx("comparison__button", {
+                active: activeComparison === "moncloud",
+              })}
+              onClick={() => setActiveComparison("moncloud")}
             >
               Moncloud
             </button>
           </div>
           <div className="comparison__wrapper">
-            <div className={clsx('comparison__subject', 'openstack', { active: activeComparison === 'openstack' })}>
+            <div
+              className={clsx("comparison__subject", "openstack", {
+                active: activeComparison === "openstack",
+              })}
+            >
               <h3>Ванильный OpenStack</h3>
               <ul className="comparison__list list-reset">
                 <li className="comparison__item openstack__item">
@@ -203,7 +214,11 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className={clsx('comparison__subject', 'moncloud', { active: activeComparison === 'moncloud' })}>
+            <div
+              className={clsx("comparison__subject", "moncloud", {
+                active: activeComparison === "moncloud",
+              })}
+            >
               <h3>Moncloud</h3>
               <ul className="comparison__list list-reset">
                 <li className="comparison__item moncloud__item">
@@ -242,6 +257,10 @@ export default function Home() {
               </ul>
             </div>
           </div>
+        </section>
+
+        <section>
+          <NewsList limit={5} showViewAll={true} />
         </section>
       </main>
     </Layout>

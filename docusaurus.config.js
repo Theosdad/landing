@@ -1,6 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const path = require("path");
 const lightCodeTheme = require("prism-react-renderer").themes.github;
 const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
@@ -54,7 +55,10 @@ const config = {
     ],
   ],
 
-  plugins: ["docusaurus-plugin-sass"],
+  plugins: [
+    "docusaurus-plugin-sass",
+    path.resolve(__dirname, './plugins/news-plugin')
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -66,8 +70,7 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          { to: "/", label: "О нас", position: "right" },
-          { to: "#", label: "События", position: "right" },
+          { to: "/news", label: "События", position: "right" },
           { to: "#", label: "Продукты", position: "right" },
           { to: "#", label: "Контакты", position: "right" },
           {

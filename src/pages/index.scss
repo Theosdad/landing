@@ -1,14 +1,5 @@
 @use "@site/src/css/variables.scss" as *;
 
-.home-main {
-  margin: $spacing-md;
-  border-radius: $border-radius-sm;
-  background-color: $basic-white;
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-lg * 2;
-}
-
 .hero-section {
   max-width: 1800px;
   margin: 0 auto;
@@ -374,10 +365,6 @@
 }
 
 @media screen and (max-width: #{$small-screen-max-width}) {
-  .home-main {
-    margin: $spacing-md $spacing-xs;
-  }
-
   .hero-section {
     grid-template-columns: 1fr;
     padding: $spacing-xl $spacing-xs;

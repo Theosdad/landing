@@ -34,3 +34,18 @@ h6 {
   padding: 0;
   list-style-type: none;
 }
+
+main {
+  margin: $spacing-md;
+  border-radius: $border-radius-sm;
+  background-color: $basic-white;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg * 2;
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  main {
+    margin: $spacing-md $spacing-xs;
+  }
+}

@@ -1,0 +1,148 @@
+@use "@site/src/css/variables.scss" as *;
+
+.news {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-sm;
+
+    h2 {
+      @include font-size-xxl;
+      font-family: $fira;
+      font-weight: 400;
+      margin: 0;
+      color: $basic-black;
+    }
+
+    a {
+      color: $blue-2;
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__year {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: $spacing-md;
+  }
+
+  &__year-label {
+    place-self: end;
+    font-family: $fira;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 100%;
+    color: rgba($color: $blue-2, $alpha: 0.1);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 4px;
+      height: calc(100% + $spacing-lg);
+      background-color: $gray-3;
+      position: absolute;
+      left: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: $spacing-lg * 2;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__date {
+    @include font-size-lg;
+    width: 65px;
+    text-align: right;
+    font-family: $fira;
+    font-weight: 400;
+    flex-shrink: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: $basic-white;
+      width: $spacing-sm;
+      height: $spacing-sm;
+      border-radius: 50%;
+      border: 2px solid $gray-1;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -25px;
+    }
+  }
+
+  &__title {
+    line-height: 24px;
+
+    a {
+      color: $blue-2;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .news {
+    padding: $spacing-xs;
+
+    &__header {
+      flex-direction: column;
+
+      a {
+        align-self: flex-end;
+      }
+    }
+
+    &__year {
+      grid-template-columns: 1fr;
+    }
+
+    &__date {
+      width: 50px;
+    }
+
+    &__year-label {
+      place-self: start;
+      font-size: 32px;
+      margin-left: $spacing-xs;
+    }
+
+    &__list {
+      &::before {
+        height: calc(100% + $spacing-xxs);
+        left: 65px;
+      }
+    }
+  }
+}
