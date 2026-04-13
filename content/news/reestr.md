@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Регистрация в Реестре Отечественного ПО Министерства Цифрового Развития: <a href="https://reestr.digital.gov.ru/reestr/3050301/">Отечественная облачная платформа 1.0</a>.
+Регистрация в Реестре Отечественного ПО Министерства Цифрового Развития: <a href="https://reestr.digital.gov.ru/reestr/3050301/" target="_blank" rel="noopener noreferrer">Отечественная облачная платформа 1.0</a>.

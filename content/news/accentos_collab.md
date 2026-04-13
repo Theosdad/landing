@@ -8,19 +8,18 @@ images:
   slider: true
 ---
 
-В рамках открытой конференции «Виртуализация. Российская практика» подписан договор о совместной деятельности ООО «Системные решения» и ООО «Акцентос». В результате переговоров компания ООО «Акцентос» и все её передовые разработки были выкуплены для интеграции с наработками дистрибутива <a href="https://reestr.digital.gov.ru/reestr/307271/">Асперитас</a> и разработки нового дистрибутива облачной среды moncloud, включающего технологии Асперитас и Акцентос.
+В рамках открытой конференции «Виртуализация. Российская практика» подписан договор о совместной деятельности ООО «Системные решения» и ООО «Акцентос». В результате переговоров компания ООО «Акцентос» и все её передовые разработки были выкуплены для интеграции с наработками дистрибутива <a href="https://reestr.digital.gov.ru/reestr/307271/" target="_blank" rel="noopener noreferrer">Асперитас</a> и разработки нового дистрибутива облачной среды moncloud, включающего технологии Асперитас и Акцентос.
 
 **Место:** MonArch Moscow Hotel (ex Renaissance) 5*  
 Москва, Ленинградский просп., 31А, стр. 1  
-[monarchhotels.ru](https://monarchhotels.ru/)
+<a href="https://monarchhotels.ru/" target="_blank" rel="noopener noreferrer">monarchhotels.ru</a>
 
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/conference-1.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/conference-2.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/conference-3.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/conference-4.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-</swiper-container>
-
+<!-- SLIDER_START -->
+<img src="/landing/assets/img/conference-1.jpg" alt="Конференция 1" />
+<img src="/landing/assets/img/conference-2.jpg" alt="Конференция 2" />
+<img src="/landing/assets/img/conference-3.jpg" alt="Конференция 3" />
+<img src="/landing/assets/img/conference-4.jpg" alt="Конференция 4" />
+<!-- SLIDER_END -->
 
 ### Программа прошедшего мероприятия
 
