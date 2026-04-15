@@ -1,0 +1,75 @@
+@use "@site/src/css/variables.scss" as *;
+
+.product-card {
+  padding: $spacing-md;
+  border-radius: $border-radius-base;
+  border: 1px solid $gray-2;
+  text-decoration: none;
+
+  &__wrapper {
+    display: flex;
+    gap: $spacing-xs;
+    align-items: center;
+  }
+
+  &--clickable {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--in-development {
+    h3 {
+      color: $gray-1;
+    }
+
+    p {
+      color: $accent-text !important;
+    }
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxs;
+
+    h3 {
+      @include font-size-lg;
+      font-family: $fira;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      color: $basic-black;
+      font-weight: 300;
+    }
+  }
+
+  &__info-icon {
+    align-self: flex-start;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .product-card {
+    &__image {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

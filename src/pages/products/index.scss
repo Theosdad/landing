@@ -1,0 +1,67 @@
+@use "@site/src/css/variables.scss" as *;
+
+.products-page {
+  &__container {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: $spacing-xl * 2 $spacing-xl;
+  }
+}
+
+.products-section {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg * 2;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    h1 {
+      @include font-size-xxl;
+      font-family: $fira;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: $accent-text;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__title {
+    @include font-size-xl;
+    font-weight: 400;
+    margin: 0;
+    color: $gray-2;
+  }
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: $spacing-sm;
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .products-page {
+    &__container {
+      padding: $spacing-xl $spacing-xs;
+    }
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

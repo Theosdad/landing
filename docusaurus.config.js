@@ -72,7 +72,7 @@ const config = {
         },
         items: [
           { to: "/news", label: "События", position: "right" },
-          { to: "#", label: "Продукты", position: "right" },
+          { to: "/products", label: "Продукты", position: "right" },
           { to: "#", label: "Контакты", position: "right" },
           {
             type: "dropdown",

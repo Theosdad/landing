@@ -1,4 +1,5 @@
 @use "@site/src/css/variables.scss" as *;
+@import 'antd/dist/reset.css';
 
 :root {
   --ifm-color-primary: #2e8555;
