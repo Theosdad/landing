@@ -57,7 +57,8 @@ const config = {
 
   plugins: [
     "docusaurus-plugin-sass",
-    path.resolve(__dirname, './plugins/news-plugin')
+    path.resolve(__dirname, './plugins/news-plugin'),
+    path.resolve(__dirname, './plugins/bibliography-plugin')
   ],
 
   themeConfig:
@@ -79,7 +80,7 @@ const config = {
             position: "right",
             items: [
               { to: "#", label: "Обучение" },
-              { to: "#", label: "Публикации" },
+              { to: "/publications", label: "Публикации" },
               { to: "#", label: "Технологии" },
               { to: "#", label: "Лицензии, сертификаты, товарные знаки, РИД" },
             ],

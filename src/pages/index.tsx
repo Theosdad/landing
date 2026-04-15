@@ -6,6 +6,7 @@ import Layout from "@theme/Layout";
 
 import "./index.scss";
 import NewsList from "../components/NewsList";
+import { PublicationsList } from "../../plugins/bibliography-plugin/theme/PublicationsPage";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -261,6 +262,20 @@ export default function Home() {
 
         <section>
           <NewsList limit={5} showViewAll={true} />
+        </section>
+
+        <section className="publications">
+          <div className="publications__container">
+            <div className="publications__header">
+              <h3>Избранные публикации</h3>
+              <Link to="/publications">Перейти ко всем публикациям</Link>
+            </div>
+            <PublicationsList
+              selectedOnly={true}
+              limit={3}
+              groupByYear={false}
+            />
+          </div>
         </section>
       </main>
     </Layout>

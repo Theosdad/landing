@@ -364,6 +364,41 @@
   }
 }
 
+.publications {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: $spacing-xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-sm;
+
+    h3 {
+      @include font-size-xxl;
+      margin: 0;
+      font-weight: 400;
+      font-family: $fira;
+    }
+
+    a {
+      color: $blue-2;
+      text-decoration: underline;
+      align-self: flex-end;
+    }
+  }
+}
+
 @media screen and (max-width: #{$small-screen-max-width}) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -463,5 +498,13 @@
     &__list {
       width: 100%;
     }
+  }
+
+  .publications {
+    padding: $spacing-xs;
+
+      &__header {
+        flex-direction: column;
+      }
   }
 }
