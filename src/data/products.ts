@@ -6,7 +6,7 @@ export const currentProducts: Product[] = [
     title: "moncloud",
     description: "on-prem дистрибутив облачной среды, промышленное облако на базе OpenStack",
     image: "./img/moncloud.svg",
-    link: "#",
+    link: "/landing/products/moncloud",
   },
   {
     id: "wormhole",
