@@ -6,13 +6,11 @@ import Layout from "@theme/Layout";
 
 import "./index.scss";
 import NewsList from "../components/NewsList";
+import Comparison from "../components/Comparison";
 import { PublicationsList } from "../../plugins/bibliography-plugin/theme/PublicationsPage";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  const [activeComparison, setActiveComparison] = useState<
-    "openstack" | "moncloud"
-  >("openstack");
   return (
     <Layout
       title={`moncloud`}
@@ -160,105 +158,31 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="comparison">
-          <h2>Наши преимущества от&nbsp;ванильного OpenStack</h2>
-          <div className="comparison__buttons">
-            <button
-              className={clsx("comparison__button", {
-                active: activeComparison === "openstack",
-              })}
-              onClick={() => setActiveComparison("openstack")}
-            >
-              Ванильный OpenStack
-            </button>
-            <button
-              className={clsx("comparison__button", {
-                active: activeComparison === "moncloud",
-              })}
-              onClick={() => setActiveComparison("moncloud")}
-            >
-              Moncloud
-            </button>
-          </div>
-          <div className="comparison__wrapper">
-            <div
-              className={clsx("comparison__subject", "openstack", {
-                active: activeComparison === "openstack",
-              })}
-            >
-              <h3>Ванильный OpenStack</h3>
-              <ul className="comparison__list list-reset">
-                <li className="comparison__item openstack__item">
-                  Собственная система сопровождения, позволяющая обновлять
-                  облако
-                </li>
-                <li className="comparison__item openstack__item">
-                  Неизолирован от&nbsp;интернет-источников
-                </li>
-                <li className="comparison__item openstack__item">
-                  Ориентирован на&nbsp;распространённые дистрибутивы
-                  и&nbsp;не&nbsp;изолирован по&nbsp;источникам обновления:
-                  Ubuntu, RHEL и&nbsp;т.д
-                </li>
-                <li className="comparison__item openstack__item">
-                  Нет встроенных механизмов безопасности
-                </li>
-                <li className="comparison__item openstack__item">
-                  Нет VDI/виртуальных рабочих столов
-                </li>
-                <li className="comparison__item openstack__item">
-                  Базовые сети
-                </li>
-                <li className="comparison__item openstack__item">
-                  PaaS в&nbsp;виде всегда отстающих от&nbsp;сообщества сервисов,
-                  которые не&nbsp;учитывают текущих потребностей
-                </li>
-              </ul>
-            </div>
-            <div
-              className={clsx("comparison__subject", "moncloud", {
-                active: activeComparison === "moncloud",
-              })}
-            >
-              <h3>Moncloud</h3>
-              <ul className="comparison__list list-reset">
-                <li className="comparison__item moncloud__item">
-                  Собственная система сопровождения, позволяющая обновлять
-                  облако
-                </li>
-                <li className="comparison__item moncloud__item">
-                  Сборка в&nbsp;изолированной среде
-                </li>
-                <li className="comparison__item moncloud__item">
-                  Весь дистрибутив собирается в&nbsp;изолированной среде,
-                  не&nbsp;требуетинтернета для установки/развёртывания, работают
-                  отечественные&nbsp;ОС
-                </li>
-                <li className="comparison__item moncloud__item">
-                  ФСТЭК-ядро, безопасный компилятор, ПМДЗ для виртуальных машин,
-                  основан на&nbsp;сертифицированном ФСТЭК продукте
-                  и&nbsp;проходит к&nbsp;самостоятельную сертификацию
-                  по&nbsp;требованиям 187 приказа на&nbsp;4й&nbsp;уровень
-                  доверия
-                </li>
-                <li className="comparison__item moncloud__item">
-                  Есть технология VDI/виртуальных рабочих столов
-                  с&nbsp;различными профилями от&nbsp;офисной работы
-                  до&nbsp;3D-проектирования с&nbsp;пониженными задержками
-                </li>
-                <li className="comparison__item moncloud__item">
-                  Собственный SDN с&nbsp;поддержкой шифрованных виртуальных
-                  сетей, запрещающих правил firewall, NFV, SFC и&nbsp;других
-                  возможностей
-                </li>
-                <li className="comparison__item moncloud__item">
-                  PaaS в&nbsp;виде всегда отстающих от&nbsp;сообщества сервисов,
-                  которые не&nbsp;учитывают текущих потребностей
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <Comparison
+          title="Наши преимущества от ванильного OpenStack"
+          leftTitle="Ванильный OpenStack"
+          rightTitle="Moncloud"
+          leftKey="openstack"
+          rightKey="moncloud"
+          leftItems={[
+            "Собственная система сопровождения, позволяющая обновлять облако",
+            "Неизолирован от интернет-источников",
+            "Ориентирован на распространённые дистрибутивы и не изолирован по источникам обновления: Ubuntu, RHEL и т.д",
+            "Нет встроенных механизмов безопасности",
+            "Нет VDI/виртуальных рабочих столов",
+            "Базовые сети",
+            "PaaS в виде всегда отстающих от сообщества сервисов, которые не учитывают текущих потребностей",
+          ]}
+          rightItems={[
+            "Собственная система сопровождения, позволяющая обновлять облако",
+            "Сборка в изолированной среде",
+            "Весь дистрибутив собирается в изолированной среде, не требуетинтернета для установки/развёртывания, работают отечественные ОС",
+            "ФСТЭК-ядро, безопасный компилятор, ПМДЗ для виртуальных машин, основан на сертифицированном ФСТЭК продукте и проходит к самостоятельную сертификацию по требованиям 187 приказа на 4й уровень доверия",
+            "Есть технология VDI/виртуальных рабочих столов с различными профилями от офисной работы до 3D-проектирования с пониженными задержками",
+            "Собственный SDN с поддержкой шифрованных виртуальных сетей, запрещающих правил firewall, NFV, SFC и других возможностей",
+            "PaaS в виде всегда отстающих от сообщества сервисов, которые не учитывают текущих потребностей",
+          ]}
+        />
 
         <section>
           <NewsList limit={5} showViewAll={true} />

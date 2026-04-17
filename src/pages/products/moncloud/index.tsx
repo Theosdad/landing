@@ -1,11 +1,12 @@
-import React from "react";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import "./index.scss";
+import Comparison from "../../../components/Comparison";
 
 export default function MonCloudPage() {
   const instanceSvgUrl = useBaseUrl("/img/instance.svg");
+  const securitySvgUrl = useBaseUrl("/img/security.svg");
+  const clanLogoSvgUrl = useBaseUrl("/img/c-lan-logo.svg");
 
   return (
     <Layout
@@ -127,8 +128,8 @@ export default function MonCloudPage() {
                   <li className="moncloud-included__item--inner">
                     <p>
                       Доступны <b>Kubernetes-as-a-Service</b> и 
-                      <b>PostgreSQL-as-a-Service</b>
-                      с выбором версии и упрощённой настройкой.
+                      <b>PostgreSQL-as-a-Service</b>&nbsp;с выбором версии
+                      и упрощённой настройкой.
                     </p>
                   </li>
                   <li className="moncloud-included__item--inner">
@@ -150,6 +151,137 @@ export default function MonCloudPage() {
                   </p>
                 </li>
               </ul>
+            </div>
+          </section>
+
+          <section className="moncloud-security">
+            <h2>Надёжность и&nbsp;безопасность</h2>
+            <div className="moncloud-security__content">
+              <div className="moncloud-security__item">
+                <h3>Эксплуатация и&nbsp;сопровождение:</h3>
+                <p>
+                  Решение поставляется со&nbsp;средой сопровождения (TUI + CLI +
+                  API): установка, упрощённое добавление новых узлов, обновления
+                  и&nbsp;повседневные операции&nbsp;&mdash; всё через единые
+                  инструменты (собственная разработка).
+                </p>
+              </div>
+              <div className="moncloud-security__item moncloud-security__item--image">
+                <img src={securitySvgUrl} alt="" />
+              </div>
+              <div className="moncloud-security__item">
+                <h3>Безопасность и&nbsp;импортонезависимость:</h3>
+                <ul className="list-reset">
+                  <li>
+                    Изолированная сборка и&nbsp;развёртывание, не&nbsp;требуются
+                    внешние репозитории
+                  </li>
+                  <li>Поддержка отечественных&nbsp;ОС</li>
+                  <li>
+                    ФСТЭК-ядро, безопасный компилятор, ПМДЗ для ВМ. Основано
+                    на&nbsp;сертифицированном ФСТЭК продукте и&nbsp;проходит
+                    самостоятельную сертификацию по&nbsp;требованиям 187-го
+                    приказа на&nbsp;4-й уровень доверия
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <Comparison
+            title="Наши преимущества от ванильного OpenStack"
+            leftTitle="Ванильный OpenStack"
+            rightTitle="Moncloud"
+            leftKey="openstack"
+            rightKey="moncloud"
+            leftItems={[
+              "Собственная система сопровождения, позволяющая обновлять облако",
+              "Неизолирован от интернет-источников",
+              "Ориентирован на распространённые дистрибутивы и не изолирован по источникам обновления: Ubuntu, RHEL и т.д",
+              "Нет встроенных механизмов безопасности",
+              "Нет VDI/виртуальных рабочих столов",
+              "Базовые сети",
+              "PaaS в виде всегда отстающих от сообщества сервисов, которые не учитывают текущих потребностей",
+            ]}
+            rightItems={[
+              "Собственная система сопровождения, позволяющая обновлять облако",
+              "Сборка в изолированной среде",
+              "Весь дистрибутив собирается в изолированной среде, не требуетинтернета для установки/развёртывания, работают отечественные ОС",
+              "ФСТЭК-ядро, безопасный компилятор, ПМДЗ для виртуальных машин, основан на сертифицированном ФСТЭК продукте и проходит к самостоятельную сертификацию по требованиям 187 приказа на 4й уровень доверия",
+              "Есть технология VDI/виртуальных рабочих столов с различными профилями от офисной работы до 3D-проектирования с пониженными задержками",
+              "Собственный SDN с поддержкой шифрованных виртуальных сетей, запрещающих правил firewall, NFV, SFC и других возможностей",
+              "PaaS в виде всегда отстающих от сообщества сервисов, которые не учитывают текущих потребностей",
+            ]}
+          />
+
+          <section className="moncloud-implementation">
+            <h2>Преимущества и&nbsp;внедрение</h2>
+            <div className="moncloud-implementation__content">
+              <div className="moncloud-implementation__item">
+                <h3>Почему moncloud:</h3>
+                <ul className="list-reset">
+                  <li>
+                    Промышленный уровень OpenStack без доработок
+                    &laquo;на&nbsp;стороне&raquo;
+                  </li>
+                  <li>
+                    Изолированная поставка и&nbsp;соответствие жёстким
+                    требованиям безопасности
+                  </li>
+                  <li>
+                    Сокращение TCO: меньше интеграции, меньше ручной рутины,
+                    быстрее ввод в&nbsp;строй. В&nbsp;этой области наша команда
+                    знает всё, что необходимо
+                  </li>
+                  <li>
+                    Готов к&nbsp;росту: инструменты сопровождения входят
+                    в&nbsp;дистрибутив. Вы&nbsp;можете масштабировать Ваше
+                    облако в&nbsp;любой момент
+                  </li>
+                </ul>
+              </div>
+              <div className="moncloud-implementation__item">
+                <h3>Взаимодействие:</h3>
+                <p>
+                  Мы&nbsp;готовы организовать демонстрацию и&nbsp;предоставить
+                  пробный доступ к&nbsp;нашей платформе. Также
+                  мы&nbsp;предлагаем обсудить профили нагрузок, включая VDI,
+                  NFV/SFC, HPC/AI и&nbsp;корпоративные информационные системы.
+                  В&nbsp;дополнение к&nbsp;этому, мы&nbsp;готовы разработать
+                  план миграции и&nbsp;внедрения, адаптированный под ваши
+                  требования
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="moncloud-licensing">
+            <h2>Лицензирование</h2>
+            <div className="moncloud-licensing__content">
+              <div className="moncloud-licensing__item moncloud-licensing__item--partner">
+                <p>
+                  Плата берётся за&nbsp;промышленную функциональность ежегодно;
+                  также доступна бессрочная лицензия. Стоимость уточняйте
+                  у&nbsp;интегратора
+                </p>
+                <a href="https://c-lan.ru/">
+                  <img src={clanLogoSvgUrl} alt="" />
+                </a>
+              </div>
+              <div className="moncloud-licensing__item">
+                <h3>Общие принципы лицензирования:</h3>
+                <ul className="list-reset">
+                  <li>
+                    Количество контроллеров (отказоустойчивая версия или нет)
+                  </li>
+                  <li>
+                    Количество гипервизоров по&nbsp;ядрам (32&nbsp;ядра минимум,
+                    дальше линейно увеличивается стоимость)
+                  </li>
+                  <li>Количество серверов SDS, если требуется</li>
+                  <li>Количество пользователей VDI, если требуется</li>
+                </ul>
+              </div>
             </div>
           </section>
         </div>

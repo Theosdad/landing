@@ -128,9 +128,191 @@
   }
 }
 
+.moncloud-security {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  h2 {
+    @include font-size-xl;
+    font-family: $fira;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    gap: $spacing-xs;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    width: 100%;
+    padding: $spacing-lg;
+    border: 1px solid $gray-2;
+    border-radius: $border-radius-base;
+    box-shadow: 0px 4px 4px 0px rgba($color: $gray-1, $alpha: 0.08);
+
+    color: $gray-6;
+    font-weight: 300;
+    line-height: 140%;
+
+    h3 {
+      @include font-size-lg;
+      font-family: $fira;
+      color: $accent-text;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    li {
+      margin-left: $spacing-md;
+      list-style-type: disc;
+    }
+
+    &--image {
+      padding: 0;
+      border: none;
+      max-width: 315px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $border-radius-base;
+      }
+    }
+  }
+}
+
+.moncloud-implementation {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  h2 {
+    @include font-size-xl;
+    font-family: $fira;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: $spacing-xs;
+  }
+
+  &__item {
+    padding: $spacing-lg;
+    border: 1px solid $gray-2;
+    border-radius: $border-radius-base;
+    box-shadow: 0px 4px 4px 0px rgba($color: $gray-1, $alpha: 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    color: $gray-6;
+    font-weight: 300;
+    line-height: 140%;
+
+    h3 {
+      @include font-size-lg;
+      font-family: $fira;
+      color: $accent-text;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    li {
+      margin-left: $spacing-md;
+      list-style-type: disc;
+    }
+  }
+}
+
+.moncloud-licensing {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  h2 {
+    @include font-size-xl;
+    font-family: $fira;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xs;
+  }
+
+  &__item {
+    padding: $spacing-lg;
+    border: 1px solid $gray-2;
+    border-radius: $border-radius-base;
+    box-shadow: 0px 4px 4px 0px rgba($color: $gray-1, $alpha: 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    color: $gray-6;
+    font-weight: 300;
+    line-height: 140%;
+
+    &--partner {
+      background-color: $dark;
+      justify-content: space-between;
+      gap: $spacing-xl;
+      border: none;
+
+      p {
+        color: $background-color;
+        max-width: 400px;
+      }
+
+      a {
+        align-self: flex-end;
+      }
+    }
+
+    h3 {
+      @include font-size-lg;
+      font-family: $fira;
+      color: $accent-text;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    li {
+      margin-left: $spacing-md;
+      list-style-type: disc;
+    }
+  }
+}
+
 @media screen and (max-width: #{$small-screen-max-width}) {
   .moncloud-page {
     padding: $spacing-xl $spacing-xs;
+    gap: 60px;
   }
 
   .moncloud-included {
@@ -150,6 +332,30 @@
       &:nth-child(3n + 3) {
         grid-column: auto;
       }
+    }
+  }
+
+  .moncloud-security {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__item {
+      &--image {
+        display: none;
+      }
+    }
+  }
+
+  .moncloud-implementation {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .moncloud-licensing {
+    &__content {
+      grid-template-columns: 1fr;
     }
   }
 }
