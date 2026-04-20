@@ -22,7 +22,7 @@ const config = {
   customFields: {
     footerEmail: "info@moncloud.ru",
     footerPhone: "+7 495 899-09-29",
-    footerLastUpdate: "09.30.2025",
+    footerLastUpdate: "30.09.2025",
   },
 
   i18n: {

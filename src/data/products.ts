@@ -13,7 +13,7 @@ export const currentProducts: Product[] = [
     title: "wormhole",
     description: "технология предоставления доступа к удалённым рабочим столам",
     image: "./img/moncloud.svg",
-    link: "#",
+    link: "/landing/products/wormhole",
   },
 ];
 

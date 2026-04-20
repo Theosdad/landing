@@ -4,7 +4,6 @@
   max-width: 1800px;
   width: 100%;
   margin: 0 auto;
-  padding: $spacing-xl;
 
   display: flex;
   flex-direction: column;
@@ -48,8 +47,7 @@
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: $spacing-sm;
   }
 
@@ -64,6 +62,7 @@
     flex-direction: column;
     align-items: center;
     gap: $spacing-xs;
+    width: 100%;
 
     h3 {
       @include font-size-xl;
@@ -106,6 +105,7 @@
     }
   }
 
+  .wormhole__item,
   .moncloud__item {
     &::before {
       content: "";
@@ -123,8 +123,6 @@
 
 @media screen and (max-width: #{$small-screen-max-width}) {
   .comparison {
-    padding: $spacing-xl $spacing-xs;
-
     h2 {
       font-size: 32px;
     }
@@ -134,7 +132,7 @@
     }
 
     &__wrapper {
-      grid-template-columns: 1fr;
+      flex-direction: column;
       position: relative;
     }
 

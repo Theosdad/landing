@@ -278,6 +278,10 @@
   }
 }
 
+.home-comparison {
+  padding: $spacing-xl;
+}
+
 @media screen and (max-width: #{$small-screen-max-width}) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -356,5 +360,9 @@
       &__header {
         flex-direction: column;
       }
+  }
+
+  .home-comparison {
+    padding: $spacing-xl $spacing-xs;
   }
 }

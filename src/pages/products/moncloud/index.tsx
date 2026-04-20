@@ -264,7 +264,7 @@ export default function MonCloudPage() {
                   также доступна бессрочная лицензия. Стоимость уточняйте
                   у&nbsp;интегратора
                 </p>
-                <a href="https://c-lan.ru/">
+                <a href="https://c-lan.ru/" target="_blank">
                   <img src={clanLogoSvgUrl} alt="" />
                 </a>
               </div>
