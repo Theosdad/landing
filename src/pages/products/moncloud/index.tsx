@@ -2,6 +2,7 @@ import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import "./index.scss";
 import Comparison from "../../../components/Comparison";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 export default function MonCloudPage() {
   const instanceSvgUrl = useBaseUrl("/img/instance.svg");
@@ -15,6 +16,12 @@ export default function MonCloudPage() {
     >
       <main>
         <div className="moncloud-page">
+          <Breadcrumbs
+            items={[
+              { label: "Продукты:", href: "/landing/products" },
+              { label: "Moncloud" },
+            ]}
+          />
           <section className="moncloud-hero">
             <h1 className="moncloud-hero__title">Moncloud</h1>
             <p className="moncloud-hero__subtitle">

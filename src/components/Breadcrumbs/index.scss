@@ -1,0 +1,57 @@
+@use "@site/src/css/variables.scss" as *;
+
+.breadcrumb {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__home-link {
+    display: flex;
+    align-items: center;
+    color: $gray-1;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue-1;
+    }
+  }
+
+  &__home-icon {
+    flex-shrink: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-xxs;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xxs;
+  }
+
+  &__link {
+    color: $gray-1;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue-1;
+      text-decoration: none;
+    }
+  }
+
+  &__current {
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .breadcrumb {
+    display: none;
+  }
+}

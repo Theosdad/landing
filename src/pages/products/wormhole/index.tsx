@@ -1,6 +1,7 @@
 import Layout from "@theme/Layout";
 import "./index.scss";
 import Comparison from "../../../components/Comparison";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 export default function WormholePage() {
   return (
@@ -10,6 +11,14 @@ export default function WormholePage() {
     >
       <main>
         <div className="wormhole-page">
+          <div className="wormhole-page__breadcrumb">
+            <Breadcrumbs
+              items={[
+                { label: "Продукты:", href: "/landing/products" },
+                { label: "Wormhole" },
+              ]}
+            />
+          </div>
           <h1 className="wormhole-page__title">Wormhole</h1>
           <p className="wormhole-page__subtitle">
             технология предоставления доступа к&nbsp;удалённым рабочим столам
