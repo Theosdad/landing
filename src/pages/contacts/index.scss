@@ -1,0 +1,126 @@
+@use "@site/src/css/variables.scss" as *;
+
+.contacts {
+  max-width: 1400px;
+  width: 100%;
+  padding: $spacing-xl;
+  margin: $spacing-xl * 3 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+
+  &__map {
+    align-self: stretch;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $spacing-xl * 4;
+  }
+
+  &__title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    h1 {
+      @include font-size-xxl;
+      font-family: $fira;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+      color: $gray-1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+
+  &__item {
+    max-width: 325px;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    font-size: 14px;
+
+    h2 {
+      font-size: 19px;
+      font-weight: 400;
+      font-family: $fira;
+      margin: 0;
+    }
+
+    a {
+      color: $blue-2;
+    }
+
+    address {
+      color: $gray-4;
+      font-style: normal;
+      margin: 0;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    font-size: 14px;
+
+    h2 {
+      font-size: 19px;
+      font-weight: 400;
+      font-family: $fira;
+      margin: 0;
+    }
+
+    span {
+      display: inline-flex;
+      gap: $spacing-xs;
+      color: $gray-4;
+    }
+
+    b {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .contacts {
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-xs;
+    flex-direction: column;
+    align-items: normal;
+
+    &__content {
+      gap: $spacing-sm;
+    }
+
+    &__map {
+      max-width: none;
+      height: 200px;
+    }
+  }
+}
+
+.yandex-map {
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius-base;
+  overflow: hidden;
+}

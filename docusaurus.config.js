@@ -20,9 +20,15 @@ const config = {
   onBrokenLinks: "throw",
 
   customFields: {
-    footerEmail: "info@moncloud.ru",
-    footerPhone: "+7 495 899-09-29",
-    footerLastUpdate: "30.09.2025",
+    email: "info@moncloud.ru",
+    phone: "+7 495 899-09-29",
+    lastUpdate: "30.09.2025",
+    companyName: "ООО «СИСТЕМНЫЕ РЕШЕНИЯ»",
+    address: "г. Москва, Ленинградский проспект, 31аС1",
+    legalAddress: "125284, г. Москва, вн.тёр.г. Муниципальный Округ Беговой, пр-кт Ленинградский, д. 31А, стр. 1",
+    inn: "9714023666",
+    kpp: "771401001",
+    ogrn: "1237700726031",
   },
 
   i18n: {
@@ -73,7 +79,7 @@ const config = {
         items: [
           { to: "/news", label: "События", position: "right" },
           { to: "/products", label: "Продукты", position: "right" },
-          { to: "#", label: "Контакты", position: "right" },
+          { to: "/contacts", label: "Контакты", position: "right" },
           {
             type: "dropdown",
             label: "Интересное",

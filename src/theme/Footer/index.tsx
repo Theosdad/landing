@@ -9,15 +9,15 @@ import FooterLayout from '@theme/Footer/Layout';
 import type {FooterLayoutProps} from './Layout';
 
 interface CustomFields {
-  footerEmail?: string;
-  footerPhone?: string;
-  footerLastUpdate?: string;
+  email?: string;
+  phone?: string;
+  lastUpdate?: string;
 }
 
 function Footer(): ReactNode {
   const {footer} = useThemeConfig();
   const {siteConfig} = useDocusaurusContext();
-  const {footerEmail, footerPhone, footerLastUpdate} = siteConfig.customFields as CustomFields;
+  const {email, phone, lastUpdate} = siteConfig.customFields as CustomFields;
   
   if (!footer) {
     return null;
@@ -28,9 +28,9 @@ function Footer(): ReactNode {
     links: links && links.length > 0 ? <FooterLinks links={links} /> : undefined,
     logo: logo ? <FooterLogo logo={logo} /> : undefined,
     copyright: copyright ? <FooterCopyright copyright={copyright} /> : undefined,
-    email: footerEmail,
-    phone: footerPhone,
-    lastUpdate: footerLastUpdate,
+    email: email,
+    phone: phone,
+    lastUpdate: lastUpdate,
     style: 'light',
   };
 
