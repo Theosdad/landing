@@ -1,0 +1,59 @@
+@use "@site/src/css/variables.scss" as *;
+
+.education {
+  max-width: 1400px;
+  width: 100%;
+  margin: $spacing-xl * 2 auto;
+  padding: $spacing-xl;
+
+  display: grid;
+  grid-template-areas:
+    "content image "
+    "sub image ";
+  gap: $spacing-md;
+
+  &__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    h1 {
+      @include font-size-xxl;
+      font-family: $fira;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 140%;
+    margin: 0;
+    color: $accent-text;
+  }
+
+  a {
+    color: $blue-1;
+  }
+
+  &__image {
+    grid-area: image;
+  }
+
+  &__sub {
+    grid-area: sub;
+    place-content: end;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .education {
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-xs;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}

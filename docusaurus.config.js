@@ -85,7 +85,7 @@ const config = {
             label: "Интересное",
             position: "right",
             items: [
-              { to: "#", label: "Обучение" },
+              { to: "/education", label: "Обучение" },
               { to: "/publications", label: "Публикации" },
               { to: "#", label: "Технологии" },
               { to: "#", label: "Лицензии, сертификаты, товарные знаки, РИД" },
