@@ -1,0 +1,79 @@
+@use "@site/src/css/variables.scss" as *;
+
+.licenses-list {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.licenses-sidebar {
+  flex-shrink: 0;
+  width: 280px;
+  align-self: flex-start;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  &__button {
+    @include font-size-base;
+    font-family: $breeze;
+    font-weight: 400;
+    color: $gray-1;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 0;
+
+    cursor: pointer;
+
+    &--active {
+      color: $blue-1;
+      text-decoration: underline;
+    }
+  }
+}
+
+.licenses-content {
+  width: 100%;
+
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+}
+
+.licenses-year-section {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  &__year {
+    @include font-size-lg;
+    font-family: $fira;
+    margin: 0;
+    font-weight: 400;
+    color: $gray-2;
+    text-align: right;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: $spacing-sm;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .licenses-list {
+    flex-direction: column;
+  }
+
+  .licenses-year-section {
+    &__items {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+}

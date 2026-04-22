@@ -64,7 +64,8 @@ const config = {
   plugins: [
     "docusaurus-plugin-sass",
     path.resolve(__dirname, './plugins/news-plugin'),
-    path.resolve(__dirname, './plugins/bibliography-plugin')
+    path.resolve(__dirname, './plugins/bibliography-plugin'),
+    path.resolve(__dirname, './plugins/yaml-loader-plugin')
   ],
 
   themeConfig:
@@ -88,10 +89,10 @@ const config = {
               { to: "/education", label: "Обучение" },
               { to: "/publications", label: "Публикации" },
               { to: "#", label: "Технологии" },
-              { to: "#", label: "Лицензии, сертификаты, товарные знаки, РИД" },
+              { to: "/licenses", label: "Лицензии, сертификаты, товарные знаки, РИД" },
             ],
           },
-          { to: "https://docs.moncloud.ru/1.6.3/ru/", label: "Документация", position: "right" },
+          { to: "https://docs.moncloud.ru/", label: "Документация", position: "right" },
         ],
       },
       footer: {

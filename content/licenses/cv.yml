@@ -1,0 +1,56 @@
+- title: Лицензии
+  type: time_table
+  contents:
+    - title: <a href="assets/pdf/license-fstec.pdf" target="_blank" rel="noopener noreferrer">Л050-00107-77/01590243</a>
+      year: 2024
+      institution: ФСТЭК России
+      description: Лицензия на деятельность по разработке и производству средств защиты конфиденциальной информации.
+    - title: <a href="https://reestr.digital.gov.ru/reestr/3050301/" target="_blank" rel="noopener noreferrer">Отечественная облачная платформа 1.0</a>
+      year: 2025
+      institution: Минцифры России
+      description: Реестр отечественного программного обеспечения Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации
+
+- title: Свидетельства на товарные знаки
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - title: <a href="assets/pdf/tm-moncloud.pdf" target="_blank" rel="noopener noreferrer">Moncloud</a>
+          number: №1107499
+        - title: <a href="assets/pdf/tm-michman.pdf" target="_blank" rel="noopener noreferrer">Michman</a>
+          number: №1131821
+        - title: <a href="assets/pdf/tm-mostbill.pdf" target="_blank" rel="noopener noreferrer">Mostbill</a>
+          number: №1138978
+
+
+- title: Свидетельства о государственной регистрации программ для ЭВМ
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - title: <a href="assets/pdf/rid-amano.pdf" target="_blank" rel="noopener noreferrer">Amano</a>
+          number: №2024662378
+        - title: <a href="assets/pdf/rid-fractalapi.pdf" target="_blank" rel="noopener noreferrer">Fractal API</a>
+          number: №2024662654
+        - title: <a href="assets/pdf/rid-fractalmold.pdf" target="_blank" rel="noopener noreferrer">Fractal Mold</a>
+          number: №2024663042
+        - title: <a href="assets/pdf/rid-netboxscanner.pdf" target="_blank" rel="noopener noreferrer">Netbox-scanner</a>
+          number: №2024663196
+        - title: <a href="assets/pdf/rid-wormhole.pdf" target="_blank" rel="noopener noreferrer">Wormhole</a>
+          number: №2024663386
+        - title: <a href="assets/pdf/rid-oop.pdf" target="_blank" rel="noopener noreferrer">Отечественная облачная платформа 1.0</a>
+          number: №2024687182
+
+
+- title: Сертификаты совместимости облачной платформы moncloud
+  type: time_table
+  contents:
+    - year: 2026
+      items:
+        - title: <a href="assets/pdf/Сертификат_совместимости_Боцман_moncloud_signed.pdf" target="_blank" rel="noopener noreferrer">Сертификат совместимости с платформой контейнеризации Боцман</a>
+        - title: <a href="assets/pdf/moncloud+Trinity.pdf" target="_blank" rel="noopener noreferrer">Сертификат совместимости с серверами Тринити поколений М7 и М8</a>
+    - year: 2025
+      items:
+        - title: <a href="assets/pdf/moncloud+Yadro_G4208P_G3.pdf" target="_blank" rel="noopener noreferrer">Сертификат совместимости с сервером Yadro® G4208P G3</a>
+        - title: <a href="assets/pdf/moncloud+TATLIN_UNIFIED.pdf" target="_blank" rel="noopener noreferrer">Сертификат совместимости с СХД Yadro® TATLIN.UNIFIED</a>
+        - title: <a href="assets/pdf/moncloud+mind_migrate.pdf" target="_blank" rel="noopener noreferrer">Сертификат совместимости с ПО Mind Migrate от MIND Software</a>

@@ -1,0 +1,70 @@
+@use "@site/src/css/variables.scss" as *;
+
+.license-card {
+  padding: $spacing-sm;
+  border: 1px solid $gray-2;
+  border-radius: $border-radius-xs;
+
+  display: flex;
+  gap: $spacing-xs;
+
+  &--with-icon {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &:not(&--with-icon) {
+    flex-direction: column;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: $blue-2;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: $fira;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    color: $blue-2;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__number {
+    font-family: $fira;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-1;
+  }
+
+  &__institution {
+    @include font-size-base;
+    font-family: $fira;
+    color: $gray-4;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  &__description {
+    font-family: $fira;
+    color: $gray-1;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
