@@ -1,0 +1,103 @@
+@use "@site/src/css/variables.scss" as *;
+
+.repository-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $spacing-lg;
+  padding: $spacing-md;
+  border-radius: $border-radius-xs;
+  border: 1px solid $gray-2;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__header {
+    display: flex;
+    gap: $spacing-xs;
+    align-items: flex-start;
+    color: $blue-2;
+
+    .github-icon {
+      color: $accent-text;
+      margin-left: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-family: $fira;
+    font-weight: 400;
+    margin: $spacing-xxs 0;
+  }
+
+  &__description {
+    font-family: $fira;
+    font-size: 14px;
+    line-height: 120%;
+    color: $gray-1;
+    font-weight: 300;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    margin-left: $spacing-md;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    font-family: $fira;
+    font-size: 14px;
+    color: $accent-text;
+
+    b {
+      font-weight: 400;
+      margin-right: auto;
+    }
+  }
+
+  &__count {
+    color: $blue-2;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xxs;
+
+    span {
+      color: $basic-black;
+      font-size: 12px;
+    }
+  }
+
+  &__language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .repository-card {
+    padding: $spacing-sm;
+
+    &__stats {
+      gap: $spacing-sm;
+    }
+  }
+}

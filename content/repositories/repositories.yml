@@ -1,0 +1,17 @@
+repo_description_lines_max: 5
+
+github_repos:
+  - torvalds/linux
+  - qemu/qemu
+  - openstack/nova
+  - openstack/neutron
+  - openstack/cinder
+  - openstack/glance
+  - openstack/keystone
+  - openstack/ironic
+  - openstack/heat
+  - ceph/ceph
+  - ispras/cotea
+  - Gstreamer/gstreamer
+  - pion/webrtc
+  

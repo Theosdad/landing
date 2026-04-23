@@ -65,6 +65,7 @@ const config = {
     "docusaurus-plugin-sass",
     path.resolve(__dirname, './plugins/news-plugin'),
     path.resolve(__dirname, './plugins/bibliography-plugin'),
+    path.resolve(__dirname, './plugins/repositories-plugin'),
     path.resolve(__dirname, './plugins/yaml-loader-plugin')
   ],
 
@@ -88,7 +89,7 @@ const config = {
             items: [
               { to: "/education", label: "Обучение" },
               { to: "/publications", label: "Публикации" },
-              { to: "#", label: "Технологии" },
+              { to: "/technologies", label: "Технологии" },
               { to: "/licenses", label: "Лицензии, сертификаты, товарные знаки, РИД" },
             ],
           },
