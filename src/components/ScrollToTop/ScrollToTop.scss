@@ -1,0 +1,46 @@
+@use "@site/src/css/variables.scss" as *;
+
+.scroll-to-top {
+  position: fixed;
+  bottom: $spacing-xl;
+  right: $spacing-xl;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $blue-1;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 999;
+
+  &:hover {
+    background-color: $gray-4;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid $basic-white;
+    border-bottom: none;
+    border-right: none;
+    top: 16px;
+    left: 14px;
+    transform: rotate(45deg);
+  }
+}

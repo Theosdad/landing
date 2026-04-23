@@ -18,7 +18,7 @@
       @include font-size-xxl;
       font-family: $fira;
       font-weight: 400;
-      margin: 0;  
+      margin: 0;
     }
 
     a {
@@ -131,6 +131,9 @@
 
     &__date {
       width: 50px;
+      &::after {
+        right: -23px;
+      }
     }
 
     &__year-label {
