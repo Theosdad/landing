@@ -1,0 +1,85 @@
+@use "@site/src/css/variables.scss" as *;
+
+.news-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: $spacing-xl;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &__back-link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: $spacing-xs;
+    padding-left: $spacing-xl;
+    align-self: flex-start;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 2px solid $blue-1;
+      border-right: none;
+      border-top: none;
+      position: absolute;
+      left: $spacing-xs;
+      transform: rotate(45deg);
+    }
+  }
+
+  a {
+    color: $blue-1;
+    text-decoration: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    h1 {
+      @include font-size-xxl;
+      font-family: $fira;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  &__date {
+    @include font-size-lg;
+    font-family: $fira;
+    color: $gray-4;
+    span {
+      color: $accent-text;
+    }
+  }
+
+  &__markdown {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxs;
+    line-height: 120%;
+   
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $fira;
+      color: $accent-text;
+      margin: $spacing-xs 0;
+    }
+  }
+}
+
+@media screen and (max-width: #{$small-screen-max-width}) {
+  .news-page {
+    padding: $spacing-xl $spacing-sm;
+  }
+}

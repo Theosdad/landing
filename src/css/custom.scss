@@ -1,5 +1,5 @@
 @use "@site/src/css/variables.scss" as *;
-@import 'antd/dist/reset.css';
+@import "antd/dist/reset.css";
 
 :root {
   --ifm-color-primary: #2e8555;
@@ -50,5 +50,6 @@ main {
 @media screen and (max-width: #{$small-screen-max-width}) {
   main {
     margin: $spacing-md $spacing-xs;
+    padding-bottom: 55px;
   }
 }

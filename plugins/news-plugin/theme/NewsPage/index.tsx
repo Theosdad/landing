@@ -1,9 +1,9 @@
-import React from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import { usePluginData } from '@docusaurus/useGlobalData';
-import ImageSlider from '@site/src/components/ImageSlider';
-import styles from './styles.module.css';
+import React from "react";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
+import { usePluginData } from "@docusaurus/useGlobalData";
+import ImageSlider from "@site/src/components/ImageSlider";
+import "./index.scss";
 
 interface NewsPageProps {
   data: {
@@ -27,17 +27,18 @@ export default function NewsPage({ data }: NewsPageProps) {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    const options: Intl.DateTimeFormatOptions = { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     };
-    return date.toLocaleDateString('ru-RU', options);
+    return date.toLocaleDateString("ru-RU", options);
   };
 
   // Parse content to extract slider images and replace with placeholder
   const parseContentWithSlider = () => {
-    const sliderRegex = /<!--\s*SLIDER_START\s*-->([\s\S]*?)<!--\s*SLIDER_END\s*-->/g;
+    const sliderRegex =
+      /<!--\s*SLIDER_START\s*-->([\s\S]*?)<!--\s*SLIDER_END\s*-->/g;
     const parts: React.ReactNode[] = [];
     let lastIndex = 0;
     let match;
@@ -47,10 +48,12 @@ export default function NewsPage({ data }: NewsPageProps) {
       // Add content before slider
       if (match.index > lastIndex) {
         parts.push(
-          <div 
+          <div
             key={`content-${key++}`}
-            dangerouslySetInnerHTML={{ __html: news.content.substring(lastIndex, match.index) }}
-          />
+            dangerouslySetInnerHTML={{
+              __html: news.content.substring(lastIndex, match.index),
+            }}
+          />,
         );
       }
 
@@ -64,7 +67,7 @@ export default function NewsPage({ data }: NewsPageProps) {
       while ((imgMatch = imgRegex.exec(sliderContent)) !== null) {
         images.push({
           src: imgMatch[1],
-          alt: `Изображение ${++imgIndex}`
+          alt: `Изображение ${++imgIndex}`,
         });
       }
 
@@ -79,38 +82,38 @@ export default function NewsPage({ data }: NewsPageProps) {
     // Add remaining content
     if (lastIndex < news.content.length) {
       parts.push(
-        <div 
+        <div
           key={`content-${key++}`}
-          dangerouslySetInnerHTML={{ __html: news.content.substring(lastIndex) }}
-        />
+          dangerouslySetInnerHTML={{
+            __html: news.content.substring(lastIndex),
+          }}
+        />,
       );
     }
 
-    return parts.length > 0 ? parts : (
+    return parts.length > 0 ? (
+      parts
+    ) : (
       <div dangerouslySetInnerHTML={{ __html: news.content }} />
     );
   };
 
   return (
-    <Layout title={news.title || 'Новость'}>
-      <main className={styles.newsPage}>
-        <div className="container">
-          <Link to="/news" className={styles.backLink}>
-            ← Все новости
+    <Layout title={news.title || "Новость"}>
+      <main>
+        <div className="news-page">
+          <Link to="/news" className="news-page__back-link">
+            Все новости
           </Link>
-          
-          <article className={styles.newsArticle}>
-            {news.title && (
-              <h1 className={styles.newsTitle}>{news.title}</h1>
-            )}
-            
-            <div className={styles.newsDate}>
-              {formatDate(news.date)}
+
+          <article className="news-page__content">
+            {news.title && <h1>{news.title}</h1>}
+
+            <div className="news-page__date">
+              Событие состоялось: <span>{formatDate(news.date)}</span>
             </div>
-            
-            <div className={styles.newsContent}>
-              {parseContentWithSlider()}
-            </div>
+
+            <div className="news-page__markdown">{parseContentWithSlider()}</div>
           </article>
         </div>
       </main>
